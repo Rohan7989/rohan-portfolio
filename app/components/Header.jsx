@@ -1,7 +1,40 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from "motion/react"
+
+const TypewriterText = ({ text, speed = 100 }) => {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let i = 0;
+    // const interval = setInterval(() => {
+    //   setDisplayedText((prev) => prev + text[i]);
+    //   i++;
+    //   if (i >= text.length) clearInterval(interval);
+    // }, speed);
+    // const interval = setInterval(() => {
+    //   if (i < text.length) {
+    //     setDisplayedText((prev) => prev + text[i]);
+    //     i++;
+    //   } else {
+    //     clearInterval(interval);
+    //   }
+    // }, speed);
+    const interval = setInterval(() => {
+      const nextChar = text.charAt(i);
+      if (nextChar) {
+        setDisplayedText((prev) => prev + nextChar);
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return <span>{displayedText}</span>;
+};
 
 const Header = () => {
   return (
@@ -15,19 +48,25 @@ const Header = () => {
             <Image src={assets.ccrohan} alt='' className='rounded-full w-32' />
         </motion.div>
 
-         <motion.h3 
+         {/* <motion.h3 
           //  initial={{y : -20, opacity :0}}
           //  whileInView={{y:0 , opacity: 1}}
           //  transition={{duration : 0.8, delay :0.5}}
          animate={{
-     scale: 2,
-     transition: { duration: 2 }
-   }}
-    //animate={{ rotate: 360 }} 
-
-         className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
-                Hii I am Rohan Tagadghar <Image src={assets.hand_icon} alt='' className='w-6' /></motion.h3>
-       
+                scale: 2,
+                transition: { duration: 2 }
+                }}
+                 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
+                Hii I am Rohan Tagadghar <Image src={assets.hand_icon} alt='' className='w-6' /></motion.h3> */}
+       <motion.h3
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'
+      >
+        <TypewriterText text="Hii I am Rohan Tagadghar" speed={80} />
+        <Image src={assets.hand_icon} alt='' className='w-6' />
+      </motion.h3>
        
        <motion.h1
          initial={{y : -30, opacity :0}}
