@@ -40,24 +40,15 @@ const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col
     items-center justify-center gap-4 '>
-        <motion.div
+        {/* <motion.div
          initial={{scale: 0}}
          whileInView={{scale: 1}}
          transition={{duration : 0.8, type : 'spring' ,stiffness : 100}}
         >
             <Image src={assets.ccrohan} alt='' className='rounded-full w-32' />
-        </motion.div>
+        </motion.div> */}
 
-         {/* <motion.h3 
-          //  initial={{y : -20, opacity :0}}
-          //  whileInView={{y:0 , opacity: 1}}
-          //  transition={{duration : 0.8, delay :0.5}}
-         animate={{
-                scale: 2,
-                transition: { duration: 2 }
-                }}
-                 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
-                Hii I am Rohan Tagadghar <Image src={assets.hand_icon} alt='' className='w-6' /></motion.h3> */}
+        
        <motion.h3
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -105,3 +96,14 @@ const Header = () => {
 }
 
 export default Header
+
+ {/* <motion.h3 
+          //  initial={{y : -20, opacity :0}}
+          //  whileInView={{y:0 , opacity: 1}}
+          //  transition={{duration : 0.8, delay :0.5}}
+         animate={{
+                scale: 2,
+                transition: { duration: 2 }
+                }}
+                 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>
+                Hii I am Rohan Tagadghar <Image src={assets.hand_icon} alt='' className='w-6' /></motion.h3> */}
