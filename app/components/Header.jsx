@@ -40,13 +40,13 @@ const Header = () => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col
     items-center justify-center gap-4 '>
-        {/* <motion.div
+        <motion.div
          initial={{scale: 0}}
          whileInView={{scale: 1}}
          transition={{duration : 0.8, type : 'spring' ,stiffness : 100}}
         >
             <Image src={assets.ccrohan} alt='' className='rounded-full w-32' />
-        </motion.div> */}
+        </motion.div>
 
         
        <motion.h3
@@ -71,7 +71,7 @@ const Header = () => {
          whileInView={{ opacity: 1}}
          transition={{duration : 0.6, delay :0.7}}
         className='max-w-2xl mx-auto font-Ovo'>
-            I am a frontend developer from karnataka,India with no experience in multiple companies like Microsoft ,Tesla and Apple.
+            I am a frontend developer from karnataka, India with  experience in multiple companies like Microsoft ,Tesla and Apple.
         </motion.p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
