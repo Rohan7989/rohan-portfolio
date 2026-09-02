@@ -19,10 +19,10 @@ const Footer = ({isDarkMode}) => {
         <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
             <p>0 2025 Rohan Tagadghar . All rights reserved.</p>
             <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-                <li><a target='_blank' href="https://instagram/id_hi_nahi_hai"></a>GitHub</li>
-                <li><a target='_blank' href="https://instagram/id_hi_nahi_hai"></a>LinkedIn</li>
-                <li><a target='_blank' href="https://instagram/id_hi_nahi_hai"></a>Twitter</li>
-                <li><a target='_blank' href="https://instagram/id_hi_nahi_hai"></a>Instagram</li>
+                <li><a target='_blank' href="https://github.com/Rohan7989" el="noopener noreferrer">GitHub</a></li>
+                <li><a target='_blank' href="https://www.linkedin.com/in/rohan-tagadaghar" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a target='_blank' href="https://www.linkedin.com/in/rohan-tagadaghar" >Twitter</a></li>
+                <li><a target='_blank' href="https://instagram/id_hi_nahi_hai">Instagram</a></li>
             </ul>
         </div>
     </div>
