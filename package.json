@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "motion": "^12.23.6",
-    "next": "15.4.1",
+    "next": "15.4.10",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-simple-typewriter": "^5.0.1"
