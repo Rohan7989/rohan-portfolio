@@ -19,7 +19,6 @@ const Navbar = ({isDarkMode , setIsDarkMode}) => {
     }
 
 
-
     return (
     <>
      <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
@@ -79,8 +78,3 @@ const Navbar = ({isDarkMode , setIsDarkMode}) => {
 };
 
 export default Navbar
- 
-
-    //<div className='absolute top-0 left-0 w-full h-[300px]  -z-10 overflow-hidden'>
-       // <Image src="/assets/header_bg_color.png" alt="Header Background" fill className='w-full' />
-   // </div>

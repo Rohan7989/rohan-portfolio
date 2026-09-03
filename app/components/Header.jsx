@@ -8,19 +8,6 @@ const TypewriterText = ({ text, speed = 100 }) => {
 
   useEffect(() => {
     let i = 0;
-    // const interval = setInterval(() => {
-    //   setDisplayedText((prev) => prev + text[i]);
-    //   i++;
-    //   if (i >= text.length) clearInterval(interval);
-    // }, speed);
-    // const interval = setInterval(() => {
-    //   if (i < text.length) {
-    //     setDisplayedText((prev) => prev + text[i]);
-    //     i++;
-    //   } else {
-    //     clearInterval(interval);
-    //   }
-    // }, speed);
     const interval = setInterval(() => {
       const nextChar = text.charAt(i);
       if (nextChar) {
